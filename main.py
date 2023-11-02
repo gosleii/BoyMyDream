@@ -4,7 +4,7 @@ from telebot import StateMemoryStorage
 from telebot.handler_backends import StatesGroup, State
 
 state_storage = StateMemoryStorage()
-bot = telebot.TeleBot("6365794940:AAHqX_T5eLMqlLRXuFFS29CpoVqWGiZGqOc",
+bot = telebot.TeleBot("1125811332:AAGMQFHCEHV1Lswxr7aodPbgpyhVkQXVP6k",
                       state_storage=state_storage, parse_mode='Markdown')
 
 
@@ -89,7 +89,7 @@ def help_command(message):
 
 @bot.message_handler(func=lambda message: text_button_3 == message.text)
 def help_command(message):
-    bot.send_message(message.chat.id, "@boy_from_your_dream", reply_markup=menu_keyboard)  # Можно менять текст
+    bot.send_message(message.chat.id, "[Мой ТГ](https://t.me/boy_from_your_dream)", reply_markup=menu_keyboard)  # Можно менять текст
 
 
 bot.add_custom_filter(custom_filters.StateFilter(bot))
